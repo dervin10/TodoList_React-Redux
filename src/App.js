@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { connect } from "react-redux";
+import Header from "./components/Header";
+import Container from "./components/Container";
+import { AddNewTodo } from "./actions/index";
+import "./App.css";
 
-function App() {
+const App = props => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Container />
     </div>
   );
-}
+};
 
-export default App;
+const MapDispatchToProps = dispatch => ({
+  addNewTodo: todo => dispatch(AddNewTodo(todo))
+});
+
+export default connect(null, MapDispatchToProps)(App);
