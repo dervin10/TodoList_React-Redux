@@ -5,6 +5,7 @@ import Container from "./components/Container";
 import { AddNewTodo } from "./actions/index";
 import "./App.css";
 
+// testing commitizen
 const App = props => {
   return (
     <div className="App">
