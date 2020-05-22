@@ -5,6 +5,7 @@ import Container from "./components/Container";
 import { AddNewTodo } from "./actions/index";
 import "./App.css";
 
+// YES
 // testing commitizen
 // fadf
 const App = props => {
@@ -17,7 +18,7 @@ const App = props => {
 };
 
 const MapDispatchToProps = dispatch => ({
-  addNewTodo: todo => dispatch(AddNewTodo(todo))
+  addNewTodo: todo => dispatch(AddNewTodo(todo)),
 });
 
 export default connect(null, MapDispatchToProps)(App);
