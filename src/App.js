@@ -6,6 +6,7 @@ import { AddNewTodo } from "./actions/index";
 import "./App.css";
 
 // testing commitizen
+// fadf
 const App = props => {
   return (
     <div className="App">
